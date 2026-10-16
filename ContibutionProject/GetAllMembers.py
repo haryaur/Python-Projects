@@ -17,6 +17,8 @@ def getMembers():
             Names = input("Enter a name for member : ")
             if Names =="":
               pass
+            elif any(member["Name"] == Names for member in membersList):
+               print(f"Error: {Names} is already a member of this Susu group!")
             else:
               Names = Names.strip().capitalize()
               id = id + 1
